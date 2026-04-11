@@ -12,32 +12,56 @@
 import java.util.Arrays;
 
 public class AnagramCheck {
-//!using frquency character
+
 
     
     public static boolean Anagram(String s1, String s2){
-          if(s1.length() != s2.length()){
-                return false;
-          }
 
-          char[] a=s1.toCharArray();
-          char[] b = s2.toCharArray();
 
-          Arrays.sort(a);
-          Arrays.sort(b);
+    
 
-          return Arrays.equals(a, b);
+
+
+       if(s1.length() != s2.length()) {
+         return false;
+       }
+//!using frquency character
+
+         int freq[] = new int[26];
+
+         for(int i = 0; i<s1.length(); i++){
+            freq[s1.charAt(i) - 'a'] ++;
+         }
+
+         for(int i =0; i<s2.length(); i++){
+            freq[s2.charAt(i) - 'a'] --;
+         }
+
+        for(int count : freq){
+         if(count != 0){
+            return false;
+         }
+         else{
+            return true;
+         }
+        }
+      //  char[] a = s1.toCharArray();
+      //  char[] b  =s2.toCharArray();
+
+      //  Arrays.sort(a);
+      //  Arrays.sort(b);
+
+      //  return Arrays.equals(a,b );
+        
     }
     public static void main(String[] args) {
-        String s1 =  "listen";
-         String s2 = "silent";
-         if(Anagram(s1, s2)){
-            System.out.println("anagram ");
-         }else{
-            System.out.println("not anagram");
-         }
+      String s1 = "listen";
+      String s2 ="silent";
+       boolean Result = Anagram(s1, s2);
+       System.out.println(Result ? "Anagram" : "not anagram");
     }
 }
 
 //! using character frequency
 
+ 
