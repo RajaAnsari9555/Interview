@@ -1,17 +1,16 @@
-//! if sum of all divisor of a number is eqaul to that number except that number  i.e called perfect number
+//! Sum of all divisors (except itself) = the number
 
 public class PerfectNumber {
     public static boolean perfect(int n) {
          int sum =0;
+         int original = n;
 
-         for(int i =1; i<n/2; i++){
+         for(int i =1 ; i<n/2 ; i++){
             if(n %i == 0){
-                sum = sum +i;
+                sum += i;
             }
-         
          }
-
-         return sum == n;
+         return sum == original;
     }
     public static void main(String[] args) {
          int n = 28;
