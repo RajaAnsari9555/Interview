@@ -29,6 +29,6 @@ public class SubarraySumequaltoK {
 
         int[] nums = {1, 1, 1};
 
-        System.out.println(subarraySum(nums, 2)); // Output: 2
+        System.out.println(subarraySum(nums, 2)); // Output:2 
     }
 }
