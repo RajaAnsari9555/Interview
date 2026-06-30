@@ -22,7 +22,7 @@ public class Rearrange_Array_elementsbySign {
     }
 
     public static void main(String[] args) {
-        int[] nums = {3, 1, -2, -5, 2, -4};
+        int[] nums = {3, 1, -2, -5, 2, -4,5,3,-1};
 
         System.out.println(Arrays.toString(RearrangeArray(nums)));
     }
