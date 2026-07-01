@@ -14,9 +14,8 @@ public class SecondLargest {
        return slargest;
     }
     public static void main(String[] args) {
-        int[] arr = {12,3,5,66,54};
-       int result= Slargest(arr);
+        int[] arr = {12,3,5,66,54,66,78};
+       int result= Slargest(arr); 
        System.err.println(result);//second largest
-       
     }
 }
